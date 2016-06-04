@@ -16,12 +16,12 @@ doodles= [
 
 @app.route('/')
 def Welcome_page():
-    return 'Good to see you, buddy!'
+    return render_template("index.html",doodle_list= doodles)
 
 @app.route('/doodles')
 def get_doodles():
     return render_template('content.html',
-                           doodle_list=doodles,
+                           doodle_list= doodles,
                            )
 
 if __name__ == '__main__':
